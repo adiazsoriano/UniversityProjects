@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Wavefront</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="wavefrontstyle.css">
+        <script src="wavefront.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1>Wavefront Algorithm</h1>
+            <p>The <i>wavefront algorithm</i> has different names on the internet, however, this is my interpretation of it (and the algorithm implementation given by a class I took in high school with slight modifications).</p>
+            <p>This algorithm is a path planning algorithm, I will be using a 2d array to implement it.</p>
+            <p><b>NOTE: </b> Certain inputs may cause this program to malfunction.</p>
+
+            <br>
+
+            <hr>
+            <p> The regular version builds the wave and path finds in the N, S, E, W directions only.</p>
+
+            <p>
+                AWB = Advanced Wave Building - Builds wave in the extra directions of NW, NE, SW, & SE.
+                
+                <br> 
+                
+                APF = Advanced Pathfinding  - Path finds in the extra directions of NW, NE, SW, & SE.
+
+                <br> 
+                
+                AA = Advanced All - Does advanced wave building and advanced path finding at the same time.
+            </p>
+            <p>
+                EAPF = Enhanced Advanced Pathfinding - Does everything as advanced pathfinding but adds an entire ring of direction ontop of it. 
+                </br>
+                AWEAPF = Advanced Wave Building & Enhanced Advanced Pathfinding.
+            </p>
+            <hr>
+
+            <label>Enter the size of the <b>X</b> by <b>X</b> grid.(3-30)</label>
+            <input type="text" id="input" placeholder="Enter a Number.">
+            <button style="background-color: #F1F1F1; border-color: #F1F1F1;" type="button" id="regWF" onclick="wavefrontInput(); changeButtonColorOnClick()">Enter (Regular)</button>
+            <button style="background-color: #F1F1F1; border-color: #F1F1F1;" type="button" id="advWBWF" onclick="wavefrontInput('advWBWF'); changeButtonColorOnClick()">Enter (AWB)</button>
+            <button style="background-color: #F1F1F1; border-color: #F1F1F1;"  type="button" id="advPFWF" onclick="wavefrontInput('advPFWF'); changeButtonColorOnClick()">Enter (APF)</button>
+            <button style="background-color: #F1F1F1; border-color: #F1F1F1;" type="button" id="advAllWF" onclick="wavefrontInput('advAllWF'); changeButtonColorOnClick()">Enter (AA)</button>
+            <button style="background-color: #F1F1F1; border-color: #F1F1F1;" type="button" id="EAPF" onclick="wavefrontInput('EAPF'); changeButtonColorOnClick()">Enter (EAPF)</button>
+            <button style="background-color: #F1F1F1; border-color: #F1F1F1;" type="button" id="AWEAPF" onclick="wavefrontInput('AWEAPF'); changeButtonColorOnClick()">Enter (AWEAPF)</button>
+        </div>
+        <div id="legend"></div>
+        <div id="table">
+            <p id="o">Output Area.</p>
+        </div>
+    </body>
+</html>

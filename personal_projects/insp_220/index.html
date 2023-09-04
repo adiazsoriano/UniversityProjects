@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Infix to Postfix</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <script src="InfToPos.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1>Infix to Postfix Calculator</h1>
+            <p>This calculator uses the shunting yard algorithm.</p>
+            <p>Press F12 to see the process of the algorithm (Console).</p>
+            <p><b>NOTE:</b> The input accepts letters and digits 0-9(Not multiple digits like 11 or 154).</p>
+            <br/>
+            <p>Acceptable inputs include: <u>a + b</u> or <u>(1 + 2) - 3</u></p>
+            <hr/>
+        </div>
+        <div>
+            <input type="text" id="input"><br/>
+            <button type="button" onclick="calculate()">Calculate</button>
+            <br/><br/>
+            <p id="output">Output Text.</p>
+        </div>
+    </body>
+</html>

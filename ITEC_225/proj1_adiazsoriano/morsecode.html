@@ -1,0 +1,42 @@
+﻿<!--Angel Diaz-Soriano-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Morse Code Translator</title>
+    <meta charset="utf-8"/>
+    <script src="morsecodescript.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+    <link rel="stylesheet" href="morsecodestyle.css">
+    <link rel="shortcut icon" href="favicon.png">
+</head>
+<body>
+    <div>
+      <form> 
+        <fieldset>
+            <legend>Translate a Message</legend>
+            <div>
+                <br/><label>Input</label><br/>
+                <textarea id="input" name="input" rows="8" cols="50"></textarea>
+            </div>
+
+            <br/><br/>
+
+            <div>
+                <button class="pure-button pure-button-primary" type="button" onclick="c2mc()">Text to Morse Code</button>
+                <button class="pure-button pure-button-primary" type="button" onclick="mc2c()">Morse Code to Text</button>
+                <button class="pure-button pure-button-primary" type="button" onclick="clearFields()">Clear</button>
+            </div>
+            
+            <br/><br/>
+
+            <div>
+                <label>Output</label><br/>  
+                <textarea id="output" name="output" rows="8" cols="50" readonly></textarea>
+            </div>
+            <br/><br/>
+        </fieldset>
+      </form>
+    </div>
+</body>
+</html>
